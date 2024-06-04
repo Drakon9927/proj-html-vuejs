@@ -26,8 +26,8 @@
       <div class="container-fluid full-width-container my-3 mystarbg">
         <div class="row g-0">
             <div class="col-6">
-                <div class="row g-0">
-                    <div class="col-4 p-5">
+                <div class="row g-0  p-5">
+                    <div class="col-4">
                         <p class="goldentext">FIND OUR RESTAURANTS</p>
 
                         <P class="text-secondary">1614 E. Bell Rd #104. <br>
@@ -48,14 +48,46 @@
                        <p class="text-secondary">Corso Itali AA <br>
                         Naples, AZ 85022 <br>
                         (989) 867-1010</p> 
+
+                        <p class="goldentext mymargin"> © 2020 <span class="text-success">Qode Interactive</span></p>
                     </div>
 
                     <div class="col-4">
-                        
+                      <p class="goldentext">WORKING HOURS</p>
+
+                      <P class="goldentext m-0">MONDAY</P>
+                      <span class="text-danger">Kitchen Closed</span>
+
+                      <p class="goldentext mt-3 mb-0">TUSEDAY UNTIL FRIDAY</p>
+                      <span class="text-secondary">9:00 - 22:00</span>
+
+                      <p class="goldentext mt-3 mb-0">SATURDAY <span class="text-danger">*</span></p>
+                      <span class="text-secondary">Saturday 11am to <br> midnight</span>
+
+                      <p class="goldentext mt-3 mb-0">SUNDAY</p>
+                      <span class="text-secondary">9:00 - 22:00</span>
+
+                      <p class="goldentext mt-5 mb-0">FOLLOW US:
+                         <span><i class="fa fa-twitter"></i>
+                          <i class="fa fa-facebook-f"></i>
+                          <i class="fa fa-instagram"></i>
+                          <i class="fa fa-linkedin"></i>
+                        </span></p>
+
+
                     </div>
 
                     <div class="col-4">
-                        
+                        <p class="text-white fs-3 px-2">THE DON PEPPE <br>
+                        CREW FIRST AND <br>
+                        FOREMOST <br>
+                        VALUES AN <br>
+                        AUTHENTIC, <br>
+                        WELL BAKED <br>
+                        SLICE OF PIZZA.
+                        </p>
+
+                        <img class="mymargin pl-3" src="/public/img/footer-bottom-img.png" alt="">
                     </div>
 
                 </div>
@@ -63,7 +95,7 @@
             </div>
 
             <div class="col-6 ">
-                
+                <img src="/public/img/footer-img-1.jpg" alt="">
             </div>
         </div>
 
@@ -121,5 +153,16 @@
 
   .goldentext{
     color: #B7903C;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  i{
+    color: white;
+    margin: 0 5px;
+  }
+
+  .mymargin{
+    margin-top: 200px;
   }
   </style>
