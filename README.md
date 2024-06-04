@@ -1,0 +1,2 @@
+Ci siamo organizzati suddividendo il lavoro in 3 parti. Uno svolge la parte superiore della pagina, uno la parte centrale e io quella in basso (compreso qualche pezzo di main)
+Inizierò dal main, mettendo le pizze in un array per poi iniettarle nel template.

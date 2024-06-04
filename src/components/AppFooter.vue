@@ -1,0 +1,125 @@
+<template>
+    <footer>
+      <div class="container-fluid full-width-container my-2 mybgimgred">
+        <div class="row d-flex align-items-center justify-content-center h-100">
+          <div class="col-md-2 h-100 d-flex align-items-center">
+            <select class="form-select">
+              <option v-for="n in 20" :key="n">{{ n }} person{{ n > 1 ? 's' : '' }}</option>
+            </select>
+          </div>
+          <div class="col-md-2 h-100 d-flex align-items-center">
+            <input type="date" class="form-control">
+          </div>
+          <div class="col-md-2 h-100 d-flex align-items-center">
+            <select class="form-select">
+              <option v-for="time in times" :key="time">{{ time }}</option>
+            </select>
+          </div>
+          <div class="col-md-2 h-100 d-flex align-items-center">
+            <button class="btn btn-danger w-100">BOOK A TABLE</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Container in fondo -->
+
+      <div class="container-fluid full-width-container my-3 mystarbg">
+        <div class="row g-0">
+            <div class="col-6">
+                <div class="row g-0">
+                    <div class="col-4 p-5">
+                        <p class="goldentext">FIND OUR RESTAURANTS</p>
+
+                        <P class="text-secondary">1614 E. Bell Rd #104. <br>
+                        Salerno, AZ 85022 <br>
+                        (602) 867-1010
+                        </P>
+
+                        <P class="text-secondary">204 E. Pizzetta Tommaso <br>
+                        Sorrento, AZ 85022 <br>
+                        (358) 867-1010
+                        </P>
+
+                        <P class="text-secondary">Vale Puglia 54 <br>
+                        Torre Del Greco AZ 85022 <br>
+                        (359) 867-1010
+                        </P>
+
+                       <p class="text-secondary">Corso Itali AA <br>
+                        Naples, AZ 85022 <br>
+                        (989) 867-1010</p> 
+                    </div>
+
+                    <div class="col-4">
+                        
+                    </div>
+
+                    <div class="col-4">
+                        
+                    </div>
+
+                </div>
+          
+            </div>
+
+            <div class="col-6 ">
+                
+            </div>
+        </div>
+
+      </div>
+    </footer>
+  </template>
+  
+  <script>
+  export default {
+    data() {
+      return {
+        times: this.generateTimes()
+      };
+    },
+    methods: {
+      generateTimes() {
+        const times = [];
+        const start = new Date();
+        start.setHours(6, 30, 0); 
+        for (let i = 0; i < 36; i++) {
+          const hour = start.getHours();
+          const minutes = start.getMinutes();
+          const period = hour >= 12 ? 'PM' : 'AM';
+          const formattedTime = `${hour % 12 === 0 ? 12 : hour % 12}:${minutes < 10 ? '0' : ''}${minutes} ${period}`;
+          times.push(formattedTime);
+          start.setMinutes(start.getMinutes() + 30); 
+        }
+        return times;
+      }
+    }
+  };
+  </script>
+  
+  <style>
+  .full-width-container {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .mybgimgred {
+    background-image: url(/public/img/h3-background-img-3.jpg);
+    background-size: cover;
+    height: 14rem;
+  }
+  
+  .h-100 {
+    height: 100% !important;
+  }
+
+  .goldentext{
+    color: #B7903C;
+  }
+  </style>
